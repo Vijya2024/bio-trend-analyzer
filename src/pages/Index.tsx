@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ReportUpload } from "@/components/ReportUpload";
 import { HealthDashboard } from "@/components/HealthDashboard";
-import { Stethoscope, Brain, Shield, TrendingUp, FileText, Sparkles } from "lucide-react";
+import { Stethoscope, Brain, Shield, TrendingUp, FileText, Sparkles, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/medical-hero.jpg";
 
 const Index = () => {
@@ -22,6 +23,12 @@ const Index = () => {
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="sm">About</Button>
             <Button variant="ghost" size="sm">Privacy</Button>
+            <Link to="/chat">
+              <Button variant="ghost" size="sm">
+                <MessageCircle className="mr-2 h-4 w-4" />
+                AI Chat
+              </Button>
+            </Link>
             <Button variant="default" size="sm" className="bg-gradient-primary border-0">
               Get Started
             </Button>
